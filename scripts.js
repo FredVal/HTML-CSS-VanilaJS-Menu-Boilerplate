@@ -6,11 +6,6 @@ const menuBoxes = document.querySelectorAll('.menu-item-box')
 // const thirdMenuBox = document.getElementById('menu-item-third-box')
 // const fourthMenuBox = document.getElementById('menu-item-fourth-box')
 
-for(let i=0; i<4; i++) {
-  menuItems[i].addEventListener('mouseover', () => {visible(menuBoxes[i])})
-  menuItems[i].addEventListener('mouseout', () => {invisible(menuBoxes[i])})
-}
-
 const visible = (el) => {
   let a = true
   if(a=true) {
@@ -19,8 +14,14 @@ const visible = (el) => {
 }
 const invisible = (el) => {
   let a = true
-  console.log(a)
   if(a=true) {
     el.classList.remove('visible')
   }
+}
+
+for(let i=0; i<4; i++) {
+  menuItems[i].addEventListener('mouseover', () => {visible(menuBoxes[i])})
+  menuItems[i].addEventListener('mouseout', () => {invisible(menuBoxes[i])})
+  menuBoxes[i].addEventListener('mouseover', () => {visible(menuBoxes[i])})
+  menuBoxes[i].addEventListener('mouseout', () => {invisible(menuBoxes[i])})
 }
