@@ -1,10 +1,13 @@
+:root {
+  --menu-box-indent: -14vw;
+}
 #menu-wrapper {
-  width: 75%;
+  width: 50%;
   margin: 0 auto;
 }
 #menu-wrapper ul {
+  padding-left: 0;
   margin: 0;
-  padding: 0 20px;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -17,8 +20,8 @@
 #menu-item-boxes {
   display: flex;
   flex-direction: row;
+  position: absolute;
 }
-
 .menu-item-box {
   display: none;
   padding: 2vh 2vw;
@@ -33,6 +36,10 @@
     "g1-3 g2-3 g3-3 g4-3"
     "g1-4 g2-4 g3-4 g4-4"
     "g1-5 g2-5 g3-5 g4-5";
+}
+.menu-item-box div {
+  border: solid 1px;
+  padding: 2vh 2vw;
 }
 .g1-1 { grid-area: g1-1; }
 .g2-1 { grid-area: g2-1; }
@@ -54,23 +61,16 @@
 .g2-5 { grid-area: g2-5; }
 .g3-5 { grid-area: g3-5; }
 .g4-5 { grid-area: g4-5; }
-
 .g1-1, .g2-1, .g3-1, .g4-1 {
   border-bottom: solid 1px;
 }
-
-#menu-item-second-box {
-  margin-left: 27%;
+#menu-item-first-box, #menu-item-second-box, #menu-item-third-box, #menu-item-fourth-box {
+  position: relative;
+  left: var(--menu-box-indent);
 }
-#menu-item-third-box {
-  margin-left: 54%;
-}
-#menu-item-fourth-box {
-  margin-left: 75%;
-}
-
 
 /********************************************/
+
 .visible {
 display: grid;
 animation: fade-in 1 ease 1s forwards;
