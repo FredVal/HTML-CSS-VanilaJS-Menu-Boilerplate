@@ -1,4 +1,4 @@
-const menuItems = document.querySelectorAll('li')
+const menuItems = document.querySelectorAll('.menu-li')
 const menuBoxes = document.querySelectorAll('.menu-item-box')
 
 const visible = (el) => el.classList.add('visible')
