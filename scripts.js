@@ -4,7 +4,7 @@ const menuBoxes = document.querySelectorAll('.menu-item-box')
 const visible = (el) => el.classList.add('visible')
 const invisible = (el) => el.classList.remove('visible')
 
-for(let i=0; i<4; i++) {
+for(let i=0; i<menuItems.length; i++) {
   menuItems[i].addEventListener('mouseover', () => {visible(menuBoxes[i])})
   menuItems[i].addEventListener('mouseout', () => {invisible(menuBoxes[i])})
   menuBoxes[i].addEventListener('mouseover', () => {visible(menuBoxes[i])})
