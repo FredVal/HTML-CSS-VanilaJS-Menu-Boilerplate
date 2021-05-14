@@ -64,10 +64,6 @@
 .g1-1, .g2-1, .g3-1, .g4-1 {
   border-bottom: solid 1px;
 }
-/* #menu-item-first-box, #menu-item-second-box, #menu-item-third-box, #menu-item-fourth-box {
-  position: relative;
-  left: var(--menu-box-indent);
-} */
 
 .menu-item-box {
   position: relative;
